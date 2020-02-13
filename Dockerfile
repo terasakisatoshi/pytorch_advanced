@@ -28,6 +28,7 @@ RUN pip install \
 RUN mkdir ${HOME}/.jupyter && \
     echo "\
 c.ContentsManager.default_jupytext_formats = 'ipynb,py'\n\
+c.NotebookApp.contents_manager_class = 'jupytext.TextFileContentsManager'\n\
 c.NotebookApp.open_browser = False\n\
 \
 " > ${HOME}/.jupyter/jupyter_notebook_config.py
