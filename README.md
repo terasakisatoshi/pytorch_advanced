@@ -1,3 +1,13 @@
+## Customized PyTorch in action
+
+- これは「つくりながら学ぶ! PyTorchによる発展ディープラーニング」のリポジトリを改変したものです．
+- 主に develop ブランチで開発しています．下記の Binder アイコンをクリックすることでブラウザで動作させることができます．
+- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/terasakisatoshi/pytorch_advanced/develop)
+
+
+以下，フォーク元のと同一
+
+
 ## つくりながら学ぶ! PyTorchによる発展ディープラーニング
 
 <div align="center">
