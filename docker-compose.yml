@@ -1,0 +1,30 @@
+version: '2.3'
+services:
+  jupyter:
+    build: ./
+    container_name: jupyter-pytorch
+    volumes:
+      - ./:/work
+      - ~/dataset:/dataset
+    ports:
+      - "8888:8888"
+    command: jupyter notebook --notebook-dir /work --ip=0.0.0.0 --allow-root
+  tb:
+    build: ./
+    container_name: tensorboard-pytorch
+    volumes:
+      - ./notebooks:/notebooks
+    ports:
+      - "6006:6006"
+    command: tensorboard --logdir /notebooks/runs --bind_all
+
+  jupyter-gpu:
+    build: ./
+    container_name: jupyter-pytorch-gpu
+    runtime: nvidia
+    volumes:
+      - ./:/work
+    ports:
+      - "8888:8888"
+    command: jupyter notebook --notebook-dir /work --ip=0.0.0.0 --allow-root
+
